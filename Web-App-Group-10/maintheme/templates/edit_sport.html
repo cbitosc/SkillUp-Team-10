@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+Edit Sport
+{%endblock%}
+
+{%block main%}
+
+	<!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content p-0">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
+
+        <div class="navbar-header">
+          <h1 class=" px-2  text-primary">EDIT SPORT</h1>
+        </div>
+
+        <!-- Sidebar Toggle (Topbar) -->
+        
+                               
+      
+         </nav>
+         
+       
+
+        <!-- Topbar Navbar -->
+        
+          
+</div>
+
+
+<form method="POST" id="myForm" action="{%url 'edit_sport' %}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+                    
+            
+
+                  	<div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="sport_name" placeholder="Enter Sport Name..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="start_date" placeholder="Enter start date..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="end_date" placeholder="Enter end date..." required>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" onclick="return confirm('Are you sure you want to submit ?')" >Edit Sport</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+                {%endblock%}

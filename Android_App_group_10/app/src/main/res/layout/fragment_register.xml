@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.RegisterFragment"
+        android:padding="20dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerIdET"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/ic_profile"
+                android:drawablePadding="12dp"
+                android:hint="User Id"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerNameET"
+                android:layout_below="@+id/registerIdET"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/ic_profile"
+                android:drawablePadding="12dp"
+                android:hint="Name"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerPhoneET"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/registerNameET"
+                android:drawablePadding="12dp"
+                android:drawableLeft="@drawable/ic_phone"
+                android:hint="Phone"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerMailET"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/registerPhoneET"
+                android:singleLine="true"
+                android:drawableLeft="@drawable/ic_mail"
+                android:drawablePadding="12dp"
+                android:hint="College Mail"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/registerMailET"
+                android:id="@+id/registerPasswordET"
+                android:drawablePadding="12dp"
+                android:drawableLeft="@drawable/ic_key"
+                android:layout_marginBottom="20dp"
+                android:hint="Password"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/registerSectionLL"
+                android:layout_below="@+id/registerPasswordET">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yearSpinner"
+                    android:entries="@array/years_array"
+                    tools:listitem="@android:layout/simple_spinner_item"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/branchSpinner"
+                    android:layout_marginRight="-15dp"
+                    android:entries="@array/branches_array"
+                    tools:listitem="@android:layout/simple_spinner_item"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sectionSpinner"
+                    android:entries="@array/sections_array"
+                    tools:listitem="@android:layout/simple_spinner_item"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerBtn"
+                android:text="Register"
+                android:background="@drawable/rounded_background_primary"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/registerSectionLL"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</ScrollView>

@@ -1,0 +1,79 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+EDIT SCHEDULE
+{%endblock%}
+
+{%block main%}
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content p-0">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
+
+        <div class="navbar-header">
+          <h1 class=" px-2  text-primary">EDIT SCHEDULE</h1>
+        </div>
+
+        <!-- Sidebar Toggle (Topbar) -->
+        
+                               
+      
+         </nav>
+         
+       
+
+        <!-- Topbar Navbar -->
+        
+          
+</div>
+<form method="POST" id="myForm" action="{% url 'edit_schedule'%}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+                    
+            
+
+ 					
+                  	<div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team1_id" placeholder="Enter team 1 Id..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team2_id" placeholder="Enter team 2 id..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="match_date" placeholder="Enter match date..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="match_title" placeholder="Enter match title..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="start_time" placeholder="Enter start time" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="reporting_time" placeholder="Enter reporting time" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team1" placeholder="Enter team1 name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team2" placeholder="Enter team2 name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="venue" placeholder="Enter new venue" required>
+                    </div>
+                    
+                    
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" onclick="return confirm('Are you sure you want to submit ?')" >Edit Schedule</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+             
+                {%endblock%}

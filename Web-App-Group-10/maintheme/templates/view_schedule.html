@@ -1,0 +1,86 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+VIEW SCHEDULE
+{%endblock%}
+
+{%block main%}
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content p-0">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
+
+        <div class="navbar-header">
+          <h1 class=" px-2  text-primary">VIEW SCHEDULE</h1>
+        </div>
+
+        <!-- Sidebar Toggle (Topbar) -->
+        
+                               
+      
+         </nav>
+         
+       
+
+        <!-- Topbar Navbar -->
+        
+          
+</div>
+
+  <form method="POST" id="myForm" action="{%url 'view_schedule'%}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+         
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="sport_name" placeholder="Enter Sport Name..." required>
+                    </div>
+                   
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >View schedule</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+{% if sc != "False" %}
+              <div >
+                {% for i in sc %}
+                  <ul class="list-group  " >
+                       
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Name - {{i.sport_name}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Team1 - {{i.team1}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Team2 - {{i.team2}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Date - {{i.match_date}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Title - {{i.match_title}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Commencing time - {{i.start_time}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Reporting time - {{i.reporting_time}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Venue - {{i.venue}}</h6>
+                        </li>
+                      </ul>  
+              {% endfor %}
+                  </div>
+                  {% endif %}
+                
+
+{%endblock%}

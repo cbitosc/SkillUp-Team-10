@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shruthi Sports"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="21sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:padding="15dp"
+                android:justificationMode="inter_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:text="Sporting event in cbit which is held every year in the even semester of academic year.This is organized by sports club of cbit “Chaitanya kreeda”.Chaitanya Kreeda says “A sound mind resides in a sound body.We act upon it by aiming to nature the sports man in you and provide you guys a perfect platform to achieve your goals.There will be around 20 to 30 members in the club and also president, vice president who help us in guiding and giving information and shedules of sports. The sports event will be conducted  around one month before Shruthi main fest.There will be registration process before event starts.Students can register and also there is no limit for registrations.There will be competition between branches.Overall champions will be one branch. We have athletics,badminton,cricket,football,basketball,kabatti,tabletennis,volleyball,chess,carroms,throwball for men and women.For athletics Register yourself for any number of events,at any one of our registrations desk operating just outside sports block between 9:00 am to 10:30 am.Be present in the athletic arena(cricket ground)to participate in your registered event at the corresponding time.Athletics include long jump,short put,Javelin throw,Diacus throw,Triple jump,High JumpWe will be having all the courts to play outdoor games like cricket,football,basketball,kabaddi,volley ball, throw ball.Indoor games like badminton,table tennis,chess and carroms which will be played inside the sports block nothing but physical Education department in their respective courts.And also shoes and tracks are compulsory for any of the sports.everyone should carry their identity card.This one month on sports runs rigorous with tension in each team because the champions will be only one branch.Many volunteers and organizing team also helps the players regarding details of sports.Chaitanya kreeda also conducts recruitment drive for organizing committee and coordinators.For all the adrenaline junkies who loves sports and are looking for an opportunity to flaunt their organizing skills.The competition in previous years was like on the peaks too much of competition.We will find many good players in this event.students can try out the sports talents in them.so it is the good platform who enjoys the sports.After completion of all the competitions between branches,the department of physical education invites students and staff of cbit to the prize distribution ceremony and issues certificates for winners and runners on one of the day in the main cultural fest Shruthi which will going on three days.On this occation the winners or the champions of of all the spotrs will be announced.The branch which deserves the overall title is also announced.
+"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

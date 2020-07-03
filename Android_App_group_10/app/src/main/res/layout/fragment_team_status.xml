@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TeamStatusFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    <TextView
+        android:id="@+id/teamstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team Status"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:id="@+id/teamid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="    Team Id      "
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/teamstatus"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPersonName"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/teamid"
+            android:id="@+id/spinnerLL">
+        <TextView
+            android:id="@+id/sportname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Sport: "
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/spinner"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/sports_array"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/sportName"
+            tools:listitem="@layout/spinner_dropdown_item"/>
+        </LinearLayout>
+    <Button
+        android:id="@+id/viewstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Status"
+        android:background="@drawable/rounded_background_primary"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinnerLL"
+        android:textColor="#fff"
+        android:padding="15dp"
+        android:layout_marginTop="30dp"/>
+
+    </RelativeLayout>
+</FrameLayout>

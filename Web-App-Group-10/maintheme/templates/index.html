@@ -1,0 +1,72 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+CBIT Shruti Admin
+{%endblock%}
+
+
+
+{%block main%}
+
+	<!-- Content Wrapper -->
+	<div id="content-wrapper" class="d-flex flex-column">
+
+		<!-- Main Content -->
+		<div id="content p-0">
+
+			<!-- Topbar -->
+			<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
+
+				<div class="navbar-header">
+					<h1 class=" px-2  text-primary">SHRUTI ADMIN PANEL</h1>
+				</div>
+
+				<!-- Sidebar Toggle (Topbar) -->
+				
+							 
+			
+			   </nav>
+			   
+			 
+
+				<!-- Topbar Navbar -->
+				
+					
+</div>
+
+<div class="w3-content w3-section" style="max-width:1000px">
+				
+				
+				
+				
+				<img class="mySlides" src="{% static 'inaugralpic.jpg' %}" style="width: 800px;height: 500px">
+				<img class="mySlides" src="{% static 'prizepic.jpg' %}" style="width: 800px;height: 500px">	
+				<img class="mySlides" src="{% static 'cricket.jpg' %}" style="width: 800px;height: 500px">
+				<img class="mySlides" src="{% static 'football.jpg' %}" style="width: 800px;height: 500px">
+				<img class="mySlides" src="{% static 'basketball.jpg' %}" style="width: 800px;height: 500px">
+				<img class="mySlides" src="{% static 'badminton.jpg' %}" style="width: 800px;height: 500px">
+				<img class="mySlides" src="{% static 'carroms.jpg' %}" style="width: 800px;height: 500px">
+
+				
+				
+			  </div>
+			  
+			  <script>
+			  var myIndex = 0;
+			  carousel();
+			  
+			  function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				  x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 3000); // Change image every 2 seconds
+			  }
+			  </script>
+
+			  
+{%endblock%}

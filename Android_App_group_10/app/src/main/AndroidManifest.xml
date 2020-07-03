@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shruthisports"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="Shruthi Sports"
+        android:roundIcon="@drawable/logo"
+        android:hardwareAccelerated="false"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        tools:node="replace"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.ChangePasswordActivity"
+            android:label="Change Password"/>
+        <activity android:name=".activities.MatchSchedulesActivity"
+            android:label="Match Schedules"/>
+        <activity android:name=".activities.RegisterTeamActivity"
+            android:label="Register Team"/>
+        <activity
+            android:name=".activities.CaptainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="Shruthi Sports"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:logo="@drawable/cbit_logo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

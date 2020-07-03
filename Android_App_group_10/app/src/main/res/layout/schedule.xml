@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/border_layout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:text="ABC-1 vs XYZ-2"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:id="@+id/sportNameTV"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport: Cricket"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportCategoryTV"
+        android:layout_below="@+id/sportNameTV"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: 20=Jun"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportMinPlayersTV"
+        android:layout_below="@+id/sportCategoryTV"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: 4:00 pm"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportMaxPlayersTV"
+        android:layout_below="@+id/sportCategoryTV"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

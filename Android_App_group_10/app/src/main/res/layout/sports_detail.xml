@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/border_layout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:text="Dummy Sport"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:id="@+id/sportNameTV"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category: Indoor"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportCategoryTV"
+        android:layout_below="@+id/sportNameTV"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min. Player: 2"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportMinPlayersTV"
+        android:layout_below="@+id/sportCategoryTV"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max. Players: 10"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportMaxPlayersTV"
+        android:layout_below="@+id/sportCategoryTV"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starts On: 20-Aug"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportStartDateTV"
+        android:layout_below="@+id/sportMinPlayersTV"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ends On: 20-Sep"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:id="@+id/sportEndDateTV"
+        android:layout_below="@+id/sportMaxPlayersTV"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="years_array">
+        <item>1/4</item>
+        <item>2/4</item>
+        <item>3/4</item>
+        <item>4/4</item>
+    </string-array>
+    <string-array name="branches_array">
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>IT</item>
+        <item>Mech</item>
+        <item>Civil</item>
+        <item>EEE</item>
+        <item>Prod</item>
+        <item>Chem</item>
+        <item>Bio</item>
+    </string-array>
+    <string-array name="sections_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

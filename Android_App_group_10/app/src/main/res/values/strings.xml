@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ShruthiSports</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_id"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="sports_array">
+        <item>FootBall</item>
+        <item>Badminton</item>
+        <item>BasketBall</item>
+        <item>Cricket</item>
+        <item>Kabatti</item>
+        <item>TableTennis</item>
+        <item>ThrowBall</item>
+        <item>VolleyBall</item>
+        <item>Chess</item>
+        <item>Carroms</item>
+    </string-array>
+</resources>

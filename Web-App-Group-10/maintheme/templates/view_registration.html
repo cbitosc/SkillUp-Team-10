@@ -1,0 +1,93 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+View Registration
+{%endblock%}
+
+{%block main%}
+
+	<!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content p-0">
+
+                  <!-- Topbar -->
+                  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
+
+                        <div class="navbar-header">
+                              <h1 class=" px-2  text-primary">VIEW TEAM PLAYERS</h1>
+                        </div>
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        
+                           
+                  
+                     </nav>
+                     
+                   
+
+                        <!-- Topbar Navbar -->
+                        
+                              
+</div>
+
+
+<div class="container">
+  <form method="POST" id="myForm" action="{%url 'view_registration'%}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+         
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="sport_name" placeholder="Enter Sport Name..." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" name="team_name" placeholder="Enter Team Name..." required>
+                      </div>
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >View details</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+{% if sc != "False" %}
+              <div >
+                {% for i in sc %}
+                  <ul class="list-group  " >
+                       
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Member_ID - {{i.member_ID}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport Name - {{i.sport_name}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Team ID - {{i.team_id}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Team name - {{i.team_name}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Status - {{i.status}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Player name - {{i.member_name}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Section - {{i.section}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Branch - {{i.branch}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Gender - {{i.gender}}</h6>
+                        </li>
+                        
+                      </ul>  
+              {% endfor %}
+                  </div>
+                  {% endif %}
+                </div>
+{%endblock%}

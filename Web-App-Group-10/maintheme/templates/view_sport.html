@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+View Sport
+{%endblock%}
+
+{%block main%}
+
+	<!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content p-0">
+
+                  <!-- Topbar -->
+                  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
+
+                        <div class="navbar-header">
+                              <h1 class=" px-2  text-primary">VIEW SPORT</h1>
+                        </div>
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        
+                           
+                  
+                     </nav>
+                     
+                   
+
+                        <!-- Topbar Navbar -->
+                        
+                              
+</div>
+
+
+<div class="container">
+  <form method="POST" id="myForm" action="{%url 'view_sport'%}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+         
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="sport_category" placeholder="Enter Sport category..." required>
+                    </div>
+                    
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >View details</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+{% if sc != "False" %}
+              <div >
+                {% for i in sc %}
+                  <ul class="list-group  " >
+                       
+                        <li class="p-3 mb-2 bg-primary text-white" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport Name - {{i.sport_name}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport ID - {{i.sport_id}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport category - {{i.sport_category}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Minimum players in a team - {{i.mini_team_size}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Maximum players in a team - {{i.max_team_size}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Gender - {{i.gender}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Starting from - {{i.start_date}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">To - {{i.end_date}}</h6>
+                        </li>
+                        <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Gender - {{i.gender}}</h6>
+                              <br>
+                        </li>
+                      </ul>  
+              {% endfor %}
+                  </div>
+                  {% endif %}
+                </div>
+{%endblock%}

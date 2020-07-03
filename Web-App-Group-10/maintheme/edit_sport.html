@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+Edit Sport
+{%endblock%}
+
+{%block main%}
+<form method="POST" id="myForm" action="{%url 'edit_sport' %}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+                    
+            
+
+                  	<div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="sport_name" placeholder="Enter Sport Name...">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="start_date" placeholder="Enter start date...">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="end_date" placeholder="Enter end date...">
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >Edit Sport</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+                {%endblock%}
