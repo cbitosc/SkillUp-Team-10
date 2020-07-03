@@ -1,0 +1,6 @@
+[submodule "API/Mobile"]
+	path = API/Mobile
+	url = https://github.com/Ameeruddin/User_API_group_10
+[submodule "API/Website"]
+	path = API/Website
+	url = https://github.com/Ameeruddin/Api_group_10
